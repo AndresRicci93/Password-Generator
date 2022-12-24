@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Kumbh+Sans:wght@300;400;500;600;700;900&family=Space+Grotesk&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: default;
+  
+}
+
+h1 {
+  font-size: 18px;
+  color: #E6E5EA;
+}
+
+h1.copy {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  transform: translate(181px, -75px);
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 540px;
+  height: 632px;
+
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+
+  font-weight: 400;
+}
+.title {
+  font-size: 24px;
+  color: #817D92;
+}
+.gen-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 476px;
+  height: 65px;
+  background-color: #a4ffaf;
+
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.wrapper .checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.tooWeak {
+  background-color: gray;
+  width: 15px;
+  height: 40px;
+  border: 1px solid black; 
+  margin-right: 2px;
+
+}
+
+.weak {
+  background-color:orange;
+}
+
+
+.no-value {
+  background-color: grey;
+}
+
+input::placeholder {
+  font-size: 32px;
+  color: #5c5c5c;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+input[type='text']::-webkit-input-placeholder {
+  margin-top: 20px;
+
+
+}
+.pass-gen-wrapper {
+  height: 80px;
+  margin-bottom: 24px;
+ 
+}
+.strength-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #18171F;
+  height: 72px;
+  width: 476px;
+  font-size: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.line-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.checkbox-wrapper {
+  width: 317px;
+  height: 164px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.strength-wrapper p {
+  margin-right: 16px;
+}
+
+.strength-wrapper .description {
+  margin-right: 0px;
+  margin-left: 32px;
+  font-size: 18px;
+  color: #817D92;
+}
+
+
+.arrow {
+  background: url("./assets/bx_arrow-to-left.png") no-repeat;
+  width: 12px;
+  height: 13px;
+  margin-left: 24px;
+}
+
+.line {
+  width: 6px;
+  height: 24px;
+  border: 2px solid white; 
+  margin-right: 8px;
+  background-color: #24232C;
+}
+
+
+.line-wrapper .line:nth-child(5) {
+   margin-right: 0px;
+}  
+
+
+.strong {
+  width: 8px;
+  height: 26px;
+  border: 1px solid #a4ffaf; 
+  margin-right: 8px;
+  background-color: #a4ffaf;
+}
+
+.medium {
+  width: 8px;
+  height: 26px;
+  border: 1px solid #F8CD65; 
+  margin-right: 8px;
+  background-color: #F8CD65;
+}
+.weak {
+  width: 8px;
+  height: 26px;
+  border: 1px solid #FB7C58; 
+  margin-right: 8px;
+  background-color: #FB7C58;
+}
+.too-weak {
+  width: 8px;
+  height: 26px;
+  border: 1px solid #F64A4A; 
+  margin-right: 8px;
+  background-color: #F64A4A;
+}
+h1.copy {
+  color: #a4ffaf;
+}
+.copy-btn {
+  display: flex;
+  background: url("./assets/Shape.png") no-repeat;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  margin-right: 32px;
+  transform: translate(22px, -54px);
+}
+.char-length-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 476px;
+}
+.char-length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.char-value {
+  font-size: 32px;
+  color: #A4FFAF;
+}
+.slider input {
+width: 476px;
+}
+
+
+input#pass-gen-input {
+  padding-left: 32px;
+}
+ input::placeholder {
+  /* padding-left: 32px;
+  */
+} 
+
+input[type="text"] {
+  width: 506px;
+  height: 80px;
+  font-size: 32px;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #24232c;
+  border-style: none;
+  color: white;
+}
+
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  height: 8px;
+  background: #18171F;
+  background-image: linear-gradient(#A4FFAF, #A4FFAF);
+  background-size: 5% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #E6E5EA;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  border: 2px solid #A4FFAF;
+  background: #18171F;
+  cursor: pointer;
+  
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  cursor: pointer;
+  height: 20px;
+  width: 13px;
+  transform: translateY(12px);
+  transform: translate(6px, 8px);
+ 
+  z-index: 100;
+}
+
+input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #A4FFAF;
+  height: 18px;
+  width: 18px;
+  z-index: 20;
+  border: 2px solid #a4ffaf;
+
+}
+
+
+.checkmark {
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+
+  border:2px solid white;
+  
+}
+
+.checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black; 
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; 
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  
+  display:block;
+}
+
+.settings-wrapper {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #24232C;
+}
+
+.container {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container h1 {
+  text-align: left;
+  padding-left: 46px;
+  padding-top: 4px;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  transform: translate(-159px, 0px);
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 425px) {
+
+  body,html {
+    overflow: hidden;
+  }
+  #root {
+    padding: unset;
+  }
+  .main-wrapper {
+    height: 766px;
+    width: 343px;
+  }
+  .title {
+    font-size: 16px;
+    color: #817D92;
+  }
+   h1.copy {
+    transform: translate(94px, -67px);
+    color: #a4ffaf;
+   }
+  .copy-btn {
+    margin-right: 32px;
+    transform: translate(34px, -45px);
+  }
+  .pass-gen-wrapper {
+    height: 64px;
+    width: 343px;
+    margin-bottom: 16px;
+  }
+
+  input[type="text"] {
+    width: 325px;
+    height: 64px;
+    font-size: 24px;
+    color: #E6E5EA;
+}
+  input::placeholder {
+  font-size: 24px;
+  } 
+  input#pass-gen-input {
+    padding-left:16px;
+  }
+  .settings-wrapper {
+    width: 343px;
+
+  }
+  
+  .char-length-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 311px;
+  }
+  .char-length p {
+    font-size: 16px;
+  }
+  .char-length {
+    height: 31px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  .char-value {
+    font-size: 24px;
+  }
+  .slider input {
+    width: 311px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 343px;
+  }
+  .checkbox-wrapper {
+    width: 295px;
+    height: 200px;
+    margin-bottom: unset;
+  }
+  .line-wrapper {
+    margin-right: 16px;
+  }
+  .line-wrapper p {
+    font-size: 18px;
+  }
+  .container h1 {
+    font-size: 16px;
+  }
+
+  .strength-wrapper {
+    width: 311px;
+    height: 56px;
+    margin-bottom: 16px;
+    margin-top: unset;
+  }
+
+  .strength-wrapper .description {
+    margin-left: 16px;
+}
+  .gen-btn {
+    width: 311px;
+    height: 56px;
+  }
+
+
+}
